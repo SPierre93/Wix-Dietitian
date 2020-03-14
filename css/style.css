@@ -1,0 +1,612 @@
+/* GENERAL STYLES */
+*
+{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+}
+
+.nav-links a:link
+{
+    color: #605e5d;
+}
+  
+.nav-links a:visited
+{
+    color: #605e5d;
+}
+  
+.nav-links a:hover
+{
+    color: #899c40;
+}
+
+body i
+{
+    font-size: 19px;
+}
+
+#highlight-link /* ONLY for highlighting navigation links while on page */
+{
+    color: #899c40;
+}
+
+
+/* NAVIGATION STYLES */
+.container 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav /* Alison Knight - Nutritionist */
+{
+    display: grid;
+    font-size: 0.8rem;
+    grid-template-columns: 240px 2fr 1fr;
+}
+
+nav > div
+{
+    background-color: #adc743;
+    padding : 25px 12px 30px 12px;
+    text-align: center;
+}
+
+nav > div > p:first-child /* Alison Knight - nametag */
+{
+    color: #fff;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.4rem;
+    font-weight: 300px;
+}
+
+nav > div > p:last-child /* Nutritionist - nametag */
+{
+    font-size: 0.9rem;
+    color: #555353;
+    padding-top: 5px;
+}
+
+.nav-links li, .logos-links li
+{
+    display: inline-block;
+}
+
+.nav-links, .logos-links
+{
+    align-self: center ;
+}
+
+nav a, nav div, nav i, nav > ul > p
+{
+    display: inline-block;
+}
+
+.nav-links li a
+{
+    padding-right: 25px;
+}
+
+nav > ul > div > p
+{
+    text-align: center;
+    line-height: 30px;
+}
+
+nav > ul:first-child > li:first-child
+{
+    background-color: #adc743;
+    padding: 20px 20px 25px 0;
+}
+
+nav > ul > div > p:last-child
+{
+    color: #626551;
+}
+
+nav > .logos-links > li/* Nav logos */
+{
+    padding-left: 5px;
+}
+
+nav > .logos-links > li > a > i nav > .logos-links > li > a
+{
+    font-size: 1.4rem;
+}
+
+nav > .logos-links > li:first-child
+{
+    font-size: 1.1rem;
+    padding-right: 15px;
+}
+
+/* (HOME) MAIN SECTION STYLES - HERO SECTION */
+#hero-overlay
+{
+    position: absolute;
+    background-image: url("../img/hero-img.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: 80vh;
+    z-index: -1;
+}
+
+#main-home .container > #transparent-bar
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.4rem;
+    color: #555353;
+    background-color: #fff;
+    height: 80vh;
+    opacity: 0.8;
+    padding: 170px 60px;
+    z-index: 1;
+    width: 33.5%;
+}
+
+#main-home > section > div > div > h1
+{
+    margin-bottom: 100px;
+}
+
+#transparent-bar > a:link /* 'Book a Session' link */
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.2rem;
+    color: #fcfdf8;
+    background-color: #adc743;
+    opacity: 1;
+    padding: 15px 15px;
+    z-index: 2;
+    display: inline;
+}
+  
+#transparent-bar > a:visited 
+{
+    color: #fcfdf8;
+}
+  
+#transparent-bar > a:hover 
+{
+    background-color: #899c40;
+}
+
+
+/* (HOME) MAIN SECTION STYLES - GRID SECTION */
+#alison-inner-container > div
+{
+    display:grid;
+    grid-template-columns:  1fr 1fr 1fr;
+}
+
+#blog-container > div 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#single-div-salad
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#services-nutrition > div
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#main-home > section:nth-child(3) > a, main > section:nth-child(5) > a /* Blog & Services buttons */
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.5rem;
+    color: #fff;
+    display: inline-block;
+}
+
+#main-home h2, #main-about h2
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: lighter;
+    padding-bottom: 20px;
+}
+
+#alison-inner-container > div > div > img /* Meet Alison pic */
+{
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+}
+
+#alison-inner-container > div > div:nth-child(2) /* Alision section */
+{
+    grid-column: 2/span 2;
+    background-color: #f0f0f0;
+    color: #626551;
+    padding: 100px 100px;
+}
+
+#alison-inner-container > div > div > a /* Alision Read more */
+{
+    color: #adc743;
+    font-family: 'Ibarra Real Nova', serif; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    padding-top: 70px;
+}
+
+#alison-inner-container > div > div > a:hover
+{
+    color: #706962;
+}
+
+#main-home > #blog-container > div > div:first-child /* Blog button */
+{
+    background-color: #aca298;
+    padding: 65px 40px;
+    text-align: center;
+    justify-self: end;
+    height: 60%;
+    width: 40%;
+    grid-column-start: 1;
+}
+
+#main-home > #blog-container > div > div:first-child > a
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#main-home > #blog-container > div > div:first-child:hover
+{
+    background-color: #706962;
+}
+
+#main-home > #blog-container > div > div:nth-child(2)  /* Recipes & Tips Section */
+{
+    padding: 60px 80px;
+    color: #fff;
+    background-color: #adc743;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 80%;
+}
+
+#services-nutrition > div > div:first-child > img /* Salad pic */
+{
+    height: 480px;
+    grid-row: 1;
+    grid-column: 1/ span 2;
+}
+
+#services-nutrition > div:nth-child(2) > div:first-child /* Services button */
+{
+    background-color: #adc743;
+    padding: 59px;
+    justify-self: end;
+    height: 50%;
+    width: 40%;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    z-index: 1;
+}
+
+#services-nutrition > div:nth-child(2) > div:first-child > a
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+#services-nutrition > div:nth-child(2) > div:first-child:hover
+{
+    background-color: #899c40;
+}
+
+#services-nutrition > div:nth-child(2) > div:nth-child(2) /* Fam & Group Section */
+{
+    background-color: #f0f0f0;
+    padding: 50px 100px;
+    color: #626551;
+    grid-row-start: 1;
+    grid-column: 3/ span 3;
+}
+
+#services-nutrition > div:nth-child(2) > div:last-child > img /* Green drink pic */
+{
+    width: 470px;
+}
+
+#services-nutrition > div:nth-child(2) > div:last-child
+{
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.grid-sect > div > p
+{
+    font-size: 0.9rem;
+}
+
+.grid-sect > div > a
+{
+    color: #adc743;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-block;
+    padding-top: 75px;
+}
+
+
+/* (ABOUT) MAIN SECTION STYLES */
+#about-header-overlay, #plans-header-overlay
+{
+    position: absolute;
+    background-image: url("../img/wood-bg.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000;
+    background-size: cover;
+    width: 100%;
+    height: 165px;
+    z-index: -1;
+}
+
+#main-about h1, #main-plans h1
+{
+    text-align: center;
+    padding: 45px 0;
+    color: #fff;
+    font-size: 3.6rem;
+    height: 165px;
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+#main-about > section:last-child /* About Page grid */
+{
+    display: grid;
+    grid-template-columns: repeat (2,1fr);
+    grid-auto-rows: 85px;
+    max-width: 1200px;
+    justify-self: end;
+    margin: 0 auto;
+}
+
+#main-about img
+{
+    height: 340px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    justify-self: end;
+}
+
+#about-story-sect
+{
+    background-color: #f0f0f0;
+    padding: 85px;
+    color: #626551;
+    height: 520px;
+    width: 550px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    font-size: 0.9rem;
+}
+
+#specialties-sect
+{
+    background-color: #aca298;
+    padding: 80px 50px;
+    color: #fff;
+    width: 355px;
+    height: 430px;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    grid-row-end: 10;
+    justify-self: end;
+}
+
+#specialties-sect p
+{
+    list-style: none;
+    text-align: center;
+    padding-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+#specialties-sect h3
+{
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 35px;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.5rem;
+}
+
+
+/* SERVICES SECTION STYLES */
+
+
+/* PLANS SECTION STYLES */
+#main-plans > section:last-child
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    max-width: 1200px;
+    width: 940px;
+    margin: 0 auto;
+    justify-self: end;
+    padding: 35px 0px;
+    text-align: center;
+}
+
+#main-plans > section:last-child > div
+{
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+}
+
+#main-plans h2
+{
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.plans-cost
+{
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+
+.plans-cost > span
+{
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.plans-subject-line
+{
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+.plans-valid
+{
+    font-size: 0.8rem;
+    color: #9e9e9e;
+    margin-bottom: 30px;
+}
+
+#main-plans > section:last-child a:link
+{
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #adc743;
+    padding: 10px 80px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#main-plans > section:last-child a:visited
+{
+    color: #fff;
+}
+
+#main-plans > section:last-child a:hover
+{
+    background-color: #cedd8e;
+}
+
+
+
+/* BLOG SECTION STYLES */
+
+
+/* CONTACT SECTION STYLES */
+
+
+/* FOOTER STYLES */
+#footer-overlay
+{
+    position: absolute;
+    background-image: url("../img/wood-bg.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+footer
+{
+    margin-bottom: 55px;
+    padding-bottom: 3px;
+}
+
+footer, footer a
+{
+    color: #fff;
+    text-align: center;
+}
+
+footer p
+{
+    font-size: 0.9rem;
+}
+
+footer > section:first-child
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px 270px 10px 270px;
+}
+
+footer > section > div:not(.logos-links), footer > section > p
+{
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
+footer section > div:nth-child(2)
+{
+    border-left: solid #fff 1px;
+    border-right: solid #fff 1px;
+}
+
+footer h3
+{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.3rem;
+    padding-top: 10px;
+}
+
+footer > section > p:nth-last-child(2)
+{
+    grid-column-start: 2;
+    padding-top: 5px;
+    font-size: 0.8rem;
+}
+
+footer > section > .logos-links > a > i
+{
+    font-size: 1.35rem;
+}
+
+footer .logos-links a
+{
+    padding: 0px 5px;
+}
+
+
+/* MEDIA QUERIES STYLES */
