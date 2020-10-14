@@ -1732,6 +1732,7 @@ footer .logos-links a
         grid-template-columns: 1fr;
         grid-template-rows: 50px 1fr 4fr 1fr;
         justify-items: end;
+        overflow: hidden;
     }
 
     .nav-links > li
