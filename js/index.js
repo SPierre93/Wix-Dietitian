@@ -17,6 +17,7 @@ function main()
         menuModal.style.display="grid";
         closeMenuButton.style.display="block";
         bodyOpenModal.style.overflow="hidden";
+        menuModal.style.overflow="hidden";
 
         //Animation
         menuModal.classList.remove("animate__animated", "animate__slideOutRight");
