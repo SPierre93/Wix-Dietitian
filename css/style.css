@@ -1296,7 +1296,7 @@ footer .logos-links a
         height: 100vh;
         z-index: 10;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 1fr 5fr 1fr;
+        grid-template-rows: 50px 1fr 4fr 1fr;
         justify-items: end;
     }
 
@@ -1309,7 +1309,7 @@ footer .logos-links a
 
     .nav-links > li:not(:last-child)
     {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     #socialMediaNav > ul > li > a > i
@@ -1337,7 +1337,7 @@ footer .logos-links a
 
     #main-home > section > div > div > h1
     {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         font-size: 2.5rem;
     }
 
@@ -1730,7 +1730,7 @@ footer .logos-links a
         height: 100vh;
         z-index: 10;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 1fr 5fr 1fr;
+        grid-template-rows: 50px 1fr 4fr 1fr;
         justify-items: end;
     }
 
@@ -1743,7 +1743,7 @@ footer .logos-links a
 
     .nav-links > li:not(:last-child)
     {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     #socialMediaNav > ul > li > a > i

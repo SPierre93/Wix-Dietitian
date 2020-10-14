@@ -26,8 +26,8 @@ function main()
 
     //Menu close "button"
     closeMenuButton.addEventListener("click",(event)=>{
-        
-        menuButton.style.display="inline-block";
+
+        menuButton.style.display="block";
         modalTransparentLayer.style.display="none";
         closeMenuButton.style.display="none";
         bodyOpenModal.style.overflow="auto";
@@ -41,18 +41,22 @@ function main()
             if (window.matchMedia("(min-width: 992px)").matches) 
             {
                 menuModal.style.display="grid";
-                menuButton.style.display="none";
-
+                menuButton.style.display="none";  
                 menuModal.classList.remove("animate__animated", "animate__slideOutRight");
-                menuModal.classList.remove("animate__animated", "animate__slideInRight");            
-            } 
-            
-            else 
+                menuModal.classList.remove("animate__animated", "animate__slideInRight");
+            }
+
+            else
             {
+                menuButton.style.display="block";
+                modalTransparentLayer.style.display="none";
+                closeMenuButton.style.display="none";
+                bodyOpenModal.style.overflow="auto";
                 menuModal.style.display="none";
-                menuButton.style.display="inline-block";
             }
         })
     })
+
+    //menuButton.style.display=null;
 }
 main();
