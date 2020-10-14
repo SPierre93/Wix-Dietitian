@@ -2,10 +2,11 @@
 <html>
     <head lang="en">
         <meta charset="UTF-8">
-        <title>Alision Knight - Nutritionist</title>
+        <title>Alision Knight - Services</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/8865e171d4.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
         <link href="../css/style.css" rel="stylesheet">
     </head>
 
@@ -17,57 +18,82 @@
                         <p> ALISON KNIGHT <p>
                         <p> Nutritionist </p>
                     </div>
-                    <ul class="nav-links">
-                        <li> <a href="../index.html"> Home </a> </li>
-                        <li> <a href="about.html"> About Alison</a> </li> 
-                        <li> <a href="services.html" id="highlight-link"> Services </a> </li> 
-                        <li> <a href="plans.html"> Plans </a> </li> 
-                        <li> <a href="blog.html"> Blog </a> </li> 
-                        <li> <a href="contact.html"> Contact </a> </li> 
-                    </ul>
 
-                    <ul class="logos-links">
-                        <li> <a href="###"> <i class="fas fa-user-circle"> </i> </a> </li>
-                        <li> <a href="###"> Log In </a> </li>
-                        <li> <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a> </li>
-                        <li> <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a> </li>
-                        <li> <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a> </li>
-                        <li> <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a> </li> 
-                    </ul>
+                    <img src="../img/menu.svg" alt="Clickable menu icon" id="hamburger-menu">
+                    
+                    <div id="menu-modal"></div>
+                    <div id="modal-content">
+                            <i class="fas fa-times" id="close-menu-button"></i>
+
+                            <ul class="nav-links">
+                                <li> <a href="../index.html"> Home </a> </li>
+                                <li> <a href="about.html"> About Alison</a> </li> 
+                                <li> <a href="services.html" id="highlight-link"> Services </a> </li> 
+                                <li> <a href="plans.html"> Plans </a> </li> 
+                                <li> <a href="blog.html"> Blog </a> </li> 
+                                <li> <a href="contact.html"> Contact </a> </li> 
+                            </ul>
+                            
+                            <div id="logInContainer" class="logos-links">
+                                <ul>
+                                    <li> <a href="contact.html"> <i class="fas fa-user-circle"> </i> </a> </li>
+                                    <li> <a href="contact.html"> Log In </a> </li>
+                                </ul>
+                            </div>                                
+                                
+                            <div id="socialMediaNav" class="logos-links">
+                                <ul>
+                                    <li> <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a> </li>
+                                    <li> <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a> </li>
+                                    <li> <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                                    <li> <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a> </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
 
-        <main>
-            
+        <main id="main-services">
+            <section>
+                <div id="header-overlay"></div>
+                <h1> Services </h1>
+            </section>
+
+            <section id="under-construction-hero">
+                <img src="../img/under-construction.png" alt="Warning image stating that the page is under construction">
+            </section>
         </main>
 
-        <footer id="footer-overlay">
+        <footer id="footer-overlay" class="empty-page-footer">
             <section>
-                <div>
+                <div id="address-info">
                     <p> 500 Terry Francois Street </p>
                     <p> San Francisco, CA 94158 </p>
                     <p> info@mysite.com </p>
                 </div>
 
-                <div>
+                <div id="alison-name-info">
                     <h3> ALISON KNIGHT </h3>
                 </div>
 
-                <p> Tel: 123-456-7890 </p>
-                <p> Nutritionist </p>
+                <p id="telephone-info"> Tel: 123-456-7890 </p>
+                <p id="alison-title-info"> Nutritionist </p>
 
-                <div class="logos-links">
-                <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a>
-                <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a>
-                <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a>
-                <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a>
+                <div class="logos-links footer-logos">
+                    <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a>
+                    <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a>
+                    <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a>
                 </div>
             </section> 
 
             <section>
-                <p> © 2023 by Alison Knight. Proudly created with Wix.com </p>
+                <p> © 2023 by Alison Knight. Proudly designed for Wix.com </p>
             </section>
         </footer>
+
+        <script src="../js/index.js"></script>
     </body>
 </html>

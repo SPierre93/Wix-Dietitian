@@ -2,10 +2,11 @@
 <html>
     <head lang="en">
         <meta charset="UTF-8">
-        <title>Home | dietitian</title>
+        <title>Alision Knight - Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/8865e171d4.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
         <link href="css/style.css" rel="stylesheet">
     </head>
 
@@ -17,23 +18,39 @@
                         <p> ALISON KNIGHT <p>
                         <p> Nutritionist </p>
                     </div>
-                    <ul class="nav-links">
-                        <li> <a href="index.html" id="highlight-link"> Home </a> </li>
-                        <li> <a href="html/about.html"> About Alison</a> </li> 
-                        <li> <a href="html/services.html"> Services </a> </li> 
-                        <li> <a href="html/plans.html"> Plans </a> </li> 
-                        <li> <a href="html/blog.html"> Blog </a> </li> 
-                        <li> <a href="html/contact.html"> Contact </a> </li> 
-                    </ul>  
 
-                    <ul class="logos-links">
-                        <li> <a href="###"> <i class="fas fa-user-circle"> </i> </a> </li>
-                        <li> <a href="###"> Log In </a> </li>
-                        <li> <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a> </li>
-                        <li> <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a> </li>
-                        <li> <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a> </li>
-                        <li> <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a> </li> 
-                    </ul>
+                    <img src="img/menu.svg" alt="Clickable menu icon" id="hamburger-menu"> 
+                    
+                    <div id="menu-modal"></div>
+                        <div id="modal-content">
+                            <i class="fas fa-times" id="close-menu-button"></i>
+
+                            <ul class="nav-links"> 
+                                <li> <a href="index.html" id="highlight-link"> Home </a> </li>
+                                <li> <a href="html/about.html"> About Alison</a> </li> 
+                                <li> <a href="html/services.html"> Services </a> </li> 
+                                <li> <a href="html/plans.html"> Plans </a> </li> 
+                                <li> <a href="html/blog.html"> Blog </a> </li> 
+                                <li> <a href="html/contact.html"> Contact </a> </li> 
+                            </ul>  
+
+                            <div id="logInContainer" class="logos-links">
+                                <ul>
+                                    <li> <a href="html/contact.html"> <i class="fas fa-user-circle"> </i> </a> </li>
+                                    <li> <a href="html/contact.html"> Log In </a> </li>
+                                </ul>
+                            </div>
+                            
+                            <div id="socialMediaNav" class="logos-links">
+                                <ul>
+                                    <li> <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a> </li>
+                                    <li> <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a> </li>
+                                    <li> <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                                    <li> <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a> </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -44,9 +61,10 @@
                 <div class="container">
                     <div id="transparent-bar">
                         <h1> "Let food be thy medicine and medicine be thy food" </h1>
-                        <a href="html/contact.html"> Book a Session </a>    
+                        <div>
+                            <a href="html/contact.html"> Book a Session </a>    
+                        </div>
                     </div>
-         
                 </div>  
             </section>
 
@@ -84,7 +102,7 @@
                     <div>
                         <a href="html/services.html"> Services </a>
                     </div>
-
+                    
                     <div>
                         <h2> Family & Group Nutrition Counseling </h2>
                         <p> I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you. </p> 
@@ -99,30 +117,32 @@
 
         <footer id="footer-overlay">
             <section>
-                <div>
+                <div id="address-info">
                     <p> 500 Terry Francois Street </p>
                     <p> San Francisco, CA 94158 </p>
                     <p> info@mysite.com </p>
                 </div>
 
-                <div>
+                <div id="alison-name-info">
                     <h3> ALISON KNIGHT </h3>
                 </div>
 
-                <p> Tel: 123-456-7890 </p>
-                <p> Nutritionist </p>
+                <p id="telephone-info"> Tel: 123-456-7890 </p>
+                <p id="alison-title-info"> Nutritionist </p>
 
-                <div class="logos-links">
-                <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a>
-                <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a>
-                <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a>
-                <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a>
+                <div id="footer-social-media" class="logos-links footer-logos"> 
+                    <a href="https://www.facebook.com/alisonknight/" target="_BLANK" alt="Clickable Facebook logo leading to site"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="https://www.twitter.com/alisonknight/" target="_BLANK" alt="Clickable Twitter logo leading to site"> <i class="fab fa-twitter"></i> </a>
+                    <a href="https://www.pinterest.com/alisonknight/" target="_BLANK" alt="Clickable Pinterest logo leading to site"> <i class="fab fa-pinterest-p"></i> </a>
+                    <a href="https://www.instagram.com/alisonknight/" target="_BLANK" alt="Clickable Instagram logo leading to site"> <i class="fab fa-instagram"></i> </a>
                 </div>
             </section> 
 
             <section>
-                <p> © 2023 by Alison Knight. Proudly created with Wix.com </p>
+                <p> © 2023 by Alison Knight. Proudly designed for Wix.com </p>
             </section>
         </footer>
+
+        <script src="js/index.js"></script>
     </body>
 </html>

@@ -44,6 +44,13 @@ body i
     color: #899c40;
 }
 
+main
+{
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
 
 /* NAVIGATION STYLES */
 .container 
@@ -52,89 +59,102 @@ body i
     margin: 0 auto;
 }
 
-nav /* Alison Knight - Nutritionist */
+nav     /* Complete Navigation bar/section */
 {
     display: grid;
     font-size: 0.8rem;
-    grid-template-columns: 240px 2fr 1fr;
+    grid-template-columns: 240px 3fr;
 }
 
-nav > div
+#hamburger-menu, #close-menu-button, #menu-modal    /* Hide menu button, close butten and menu modal as default */
+{
+    display: none;
+}
+
+#modal-content    /* Container holding all menu details */
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.nav-links li, .logos-links li, #socialMediaNav     /* horizontally aligned Navigation links */
+{
+    display: inline-block;
+}
+
+.nav-links, #logInContainer, #socialMediaNav        /* horizontally align all of the Navigation bar in one row */
+{
+    grid-row-start: 1;
+}
+
+.logos-links        /* all logos (in Navigation and Footer) */
+{
+    justify-self: end;
+}
+
+.nav-links, .logos-links        /* all logos (in Navigation and Footer) and main Navigation links */
+{
+    align-self: center;
+}
+
+nav > div:first-child   /* Alison Knight, Nutritionist 'logo' section */
 {
     background-color: #adc743;
     padding : 25px 12px 30px 12px;
     text-align: center;
 }
 
-nav > div > p:first-child /* Alison Knight - nametag */
+nav > div:first-child > p:first-child   /* Alison Knight - nametag */
 {
     color: #fff;
     font-family: 'Ibarra Real Nova', serif;
     font-size: 1.4rem;
-    font-weight: 300px;
 }
 
-nav > div > p:last-child /* Nutritionist - nametag */
+nav > div:first-child > p:last-child /* Nutritionist - nametag */
 {
     font-size: 0.9rem;
-    color: #555353;
+    color: #626551;
     padding-top: 5px;
 }
 
-.nav-links li, .logos-links li
-{
-    display: inline-block;
-}
-
-.nav-links, .logos-links
-{
-    align-self: center ;
-}
-
-nav a, nav div, nav i, nav > ul > p
-{
-    display: inline-block;
-}
-
-.nav-links li a
+.nav-links > li > a     /* main Navigation links for pages */
 {
     padding-right: 25px;
+    color: #555353;
 }
 
-nav > ul > div > p
+#logInContainer > ul > li, #socialMediaNav > ul > li        /* Log in grouping and social media icons grouping in Navigation */
 {
-    text-align: center;
-    line-height: 30px;
+    list-style: none;
+    display: inline-block;
 }
 
-nav > ul:first-child > li:first-child
-{
-    background-color: #adc743;
-    padding: 20px 20px 25px 0;
-}
-
-nav > ul > div > p:last-child
-{
-    color: #626551;
-}
-
-nav > .logos-links > li/* Nav logos */
-{
-    padding-left: 5px;
-}
-
-nav > .logos-links > li > a > i nav > .logos-links > li > a
+#logInContainer > ul > li > a > i       /* Log in icon */
 {
     font-size: 1.4rem;
 }
 
-nav > .logos-links > li:first-child
+#logInContainer > ul > li:last-child > a        /* Log in link */
 {
-    font-size: 1.1rem;
-    padding-right: 15px;
+    font-size: 1rem;
+    margin-left: 10px;
+    color: #555353;
 }
 
-/* (HOME) MAIN SECTION STYLES - HERO SECTION */
+#socialMediaNav     /* Navigation social media section */
+{
+    margin-left: 20px;
+}
+
+#socialMediaNav > ul > li       /* Navigation social media icons */
+{
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* HOME - HERO SECTION */
 #hero-overlay
 {
     position: absolute;
@@ -155,12 +175,17 @@ nav > .logos-links > li:first-child
     font-family: 'Ibarra Real Nova', serif;
     font-size: 1.4rem;
     color: #555353;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.801);
     height: 80vh;
-    opacity: 0.8;
     padding: 170px 60px;
     z-index: 1;
     width: 33.5%;
+}
+
+#main-home > section:first-child
+{
+    position: relative;
+    height: 80vh;
 }
 
 #main-home > section > div > div > h1
@@ -168,7 +193,7 @@ nav > .logos-links > li:first-child
     margin-bottom: 100px;
 }
 
-#transparent-bar > a:link /* 'Book a Session' link */
+#transparent-bar > div > a:link /* 'Book a Session' link */
 {
     font-family: 'Ibarra Real Nova', serif;
     font-size: 1.2rem;
@@ -180,18 +205,18 @@ nav > .logos-links > li:first-child
     display: inline;
 }
   
-#transparent-bar > a:visited 
+#transparent-bar > div > a:visited 
 {
     color: #fcfdf8;
 }
   
-#transparent-bar > a:hover 
+#transparent-bar > div > a:hover 
 {
     background-color: #899c40;
 }
 
 
-/* (HOME) MAIN SECTION STYLES - GRID SECTION */
+/* HOME - GRID SECTION */
 #alison-inner-container > div
 {
     display:grid;
@@ -207,10 +232,10 @@ nav > .logos-links > li:first-child
 #single-div-salad
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-#services-nutrition > div
+#services-nutrition > div:nth-child(2)
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -236,6 +261,7 @@ nav > .logos-links > li:first-child
    object-fit: cover;
    width: 100%;
    height: 100%;
+   display: block;
 }
 
 #alison-inner-container > div > div:nth-child(2) /* Alision section */
@@ -243,7 +269,7 @@ nav > .logos-links > li:first-child
     grid-column: 2/span 2;
     background-color: #f0f0f0;
     color: #626551;
-    padding: 100px 100px;
+    padding: 100px;
 }
 
 #alison-inner-container > div > div > a /* Alision Read more */
@@ -305,10 +331,12 @@ nav > .logos-links > li:first-child
 #services-nutrition > div:nth-child(2) > div:first-child /* Services button */
 {
     background-color: #adc743;
-    padding: 59px;
+    padding-top: 55px;
     justify-self: end;
-    height: 50%;
-    width: 40%;
+    align-self: start;
+    height: 45%;
+    width: 33%;
+    text-align: center;
     grid-column-start: 2;
     grid-row-start: 1;
     z-index: 1;
@@ -318,7 +346,7 @@ nav > .logos-links > li:first-child
 {
     font-family: 'Ibarra Real Nova', serif;
     font-size: 1.5rem;
-    text-align: center;
+    /*text-align: center;*/
     color: #fff;
 }
 
@@ -339,6 +367,7 @@ nav > .logos-links > li:first-child
 #services-nutrition > div:nth-child(2) > div:last-child > img /* Green drink pic */
 {
     width: 470px;
+    display: block;
 }
 
 #services-nutrition > div:nth-child(2) > div:last-child
@@ -363,8 +392,8 @@ nav > .logos-links > li:first-child
 }
 
 
-/* (ABOUT) MAIN SECTION STYLES */
-#about-header-overlay, #plans-header-overlay
+/* ABOUT SECTION STYLES */
+#header-overlay
 {
     position: absolute;
     background-image: url("../img/wood-bg.png");
@@ -378,7 +407,7 @@ nav > .logos-links > li:first-child
     z-index: -1;
 }
 
-#main-about h1, #main-plans h1
+#main-about h1, #main-services h1, #main-plans h1, #main-blog h1, #main-contact h1
 {
     text-align: center;
     padding: 45px 0;
@@ -391,8 +420,8 @@ nav > .logos-links > li:first-child
 #main-about > section:last-child /* About Page grid */
 {
     display: grid;
-    grid-template-columns: repeat (2,1fr);
-    grid-auto-rows: 85px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 85px);
     max-width: 1200px;
     justify-self: end;
     margin: 0 auto;
@@ -525,6 +554,10 @@ nav > .logos-links > li:first-child
     background-color: #cedd8e;
 }
 
+.plan-dropdown-arrow, .plan-pushup-arrow
+{
+    display: none;
+}
 
 
 /* BLOG SECTION STYLES */
@@ -533,10 +566,22 @@ nav > .logos-links > li:first-child
 /* CONTACT SECTION STYLES */
 
 
+/* UNDER CONSTRUCTION */
+#under-construction-hero
+{
+    width: 100vw;
+}
+
+#under-construction-hero > img
+{
+    width: 100%;
+    display: block;
+}
+
+
 /* FOOTER STYLES */
 #footer-overlay
 {
-    position: absolute;
     background-image: url("../img/wood-bg.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -550,14 +595,18 @@ nav > .logos-links > li:first-child
 
 footer
 {
-    margin-bottom: 55px;
-    padding-bottom: 3px;
+    padding-bottom: 15px;
 }
 
 footer, footer a
 {
     color: #fff;
     text-align: center;
+}
+
+.footer-logos
+{
+    justify-self: center;
 }
 
 footer p
@@ -578,7 +627,7 @@ footer > section > div:not(.logos-links), footer > section > p
     padding-bottom: 5px;
 }
 
-footer section > div:nth-child(2)
+#alison-name-info
 {
     border-left: solid #fff 1px;
     border-right: solid #fff 1px;
@@ -591,7 +640,7 @@ footer h3
     padding-top: 10px;
 }
 
-footer > section > p:nth-last-child(2)
+#alison-title-info
 {
     grid-column-start: 2;
     padding-top: 5px;
@@ -609,4 +658,1389 @@ footer .logos-links a
 }
 
 
-/* MEDIA QUERIES STYLES */
+/* MEDIA QUERIES - Note: Default design is for extra large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px)        /* Large devices (desktops, 992px and up) */
+{
+    /* NAVIGATION */
+    .container 
+    {
+        max-width: 900px;
+    }
+
+    nav
+    {
+        grid-template-columns: 230px 3fr;
+    }
+
+    #modal-content 
+    {
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr;
+    }
+
+    .nav-links li a 
+    {
+        padding-right: 15px;
+    }
+
+    #logInContainer
+    {
+        width: 125px;
+    }
+
+    #logInContainer > ul > li:last-child > a
+    {
+        font-size: 0.9rem;
+        margin-left: 8px;
+    }
+
+    .logos-links 
+    {
+        padding-left: 0;
+    }
+
+    #socialMediaNav 
+    {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+    #socialMediaNav > ul
+    {
+        padding-left: 10px;
+    }
+
+    #socialMediaNav > ul > li
+    {
+        padding-left: 0;
+    }
+
+    #hamburger-menu, #close-menu-button, #menu-modal
+    {
+        display: none;
+    }
+
+
+    /* HOME */
+    #main-home .container > #transparent-bar
+    {
+        padding: 100px 60px;
+    }
+
+    #main-home > #blog-container > div > div:first-child
+    {
+        height: 40%;
+        width: 40%;
+    }
+
+    #main-home > #blog-container > div > div:first-child > a
+    {
+        display: block;
+        margin-top: -15px;
+    }
+
+    #main-home > #blog-container > div > div:nth-child(2)
+    {
+        padding: 50px 60px;
+    }
+
+    #alison-inner-container > div > div:nth-child(2) 
+    {
+        padding: 80px 60px;
+    }
+
+    #single-div-salad > img
+    {
+        width: 650px;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:first-child
+    {
+        justify-items: center;
+        height: 35%;
+        width: 35%;
+        padding: 45px 10px 20px 20px;
+        margin-left: 150px;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:nth-child(2)
+    {
+        padding: 50px 70px;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:last-child > img
+    {
+        width: 340px;
+    }
+
+
+    /* ABOUT */
+    #main-about img 
+    {
+        height: 260px;
+    }
+
+    #specialties-sect 
+    {
+        grid-row-start: 4;
+        width: 270px;
+        height: 420px;
+        margin-top: 5px;
+        padding: 80px 20px;
+    }
+
+    #main-about > section:last-child 
+    {
+        max-width: 900px;
+    }
+
+    #about-story-sect
+    {
+        padding: 85px 60px;
+    }
+
+
+    /* PLANS */
+    #main-plans > section:last-child
+    {
+        max-width: 900px;
+        width: 850px;
+        column-gap: 15px;
+    }
+
+    #main-plans > section:last-child > div
+    {
+        padding: 30px 20px;
+    }
+
+    #main-plans > section:last-child a:link
+    {
+        padding: 10px 70px;
+    }
+
+
+    /* FOOTER */
+    .empty-page-footer
+    {
+        bottom: -350px;
+    }
+
+    footer > section:first-child 
+    {
+        padding: 60px 180px 10px 180px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px)         /* Medium devices (tablets, 768px and up) */
+{
+    /* NAVIGATION */
+    nav 
+    {
+        grid-template-columns: 5fr 1fr;
+        background-color: #adc743;
+    }
+
+    nav > div > div:first-child
+    {
+        padding: 15px 12px 20px 12px;
+    }
+
+    nav > div:first-child > p:first-child
+    {
+        font-size: 2.5rem;
+    }
+
+    nav > div:first-child > p:last-child 
+    {
+        font-size: 1.3rem;
+        padding-top: 0;
+    }
+
+    #modal-content
+    {
+        display: none;
+    }
+
+
+    /* HAMBURGER MENU */    
+    #hamburger-menu
+    {
+        display: block;
+        height: 55%;
+        cursor: pointer;
+        align-self: start;
+        justify-self: start;
+        padding-top: 25px;
+    }
+
+    #close-menu-button
+    {
+        cursor: pointer;
+        justify-self: end;
+        padding: 20px 40px 0 0;
+        font-size: 2rem;
+        grid-row-start: 1;
+    }
+
+    #logInContainer
+    {
+        grid-row-start: 2;
+        align-self: end;
+    }
+
+    .nav-links
+    {
+        display: block;
+        text-align: right;
+        font-family: 'Ibarra Real Nova', serif;
+        grid-row-start: 3;
+    }
+
+    #socialMediaNav
+    {
+        grid-row-start: 4;
+        align-self: start;
+        padding-right: 70px;
+    }
+
+    #logInContainer > ul > li > a > i
+    {
+        font-size: 2.5rem;
+    }
+
+    #logInContainer > ul > li:last-child > a
+    {
+        font-size: 1.8rem;
+        padding-right: 70px;
+    }
+   
+    #menu-modal
+    {
+        display: none; 
+        position: fixed; 
+        z-index: 6; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4); 
+    }
+
+    #modal-content
+    {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 90vw;
+        height: 100vh;
+        z-index: 10;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 5fr 1fr;
+        justify-items: end;
+    }
+
+    .nav-links > li
+    {
+        display: block;
+        font-size: 2rem;
+        padding-right: 40px;
+    }
+
+    .nav-links > li:first-child
+    {
+        margin-top: 20px;
+    }
+
+    .nav-links > li:last-child
+    {
+        margin-bottom: 20px;
+    }
+
+    .nav-links > li:not(:last-child)
+    {
+        margin-bottom: 20px;
+    }
+
+    #socialMediaNav > ul > li > a > i
+    {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+
+    /* HOME */
+    #hero-overlay 
+    {
+        height: 100%;
+    }
+    
+    #main-home .container > #transparent-bar 
+    {
+        width: 80%;
+        height: 50vh;
+        padding: 70px 60px;
+        justify-self: center;
+        font-size: 1.6rem;
+        margin: 0 auto;
+    }
+
+    #main-home > section > div > div > h1
+    {
+        margin-bottom: 60px;
+        font-size: 2.7rem;
+    }
+
+    #transparent-bar > div > a:link
+    {
+        font-size: 1.4rem;
+        padding: 20px;
+    }
+
+    #transparent-bar > div
+    {
+        text-align: center;
+    }
+
+    #alison-inner-container > div > div > img 
+    {
+        object-fit: contain;
+        width: auto;
+        height: 100%;
+    }
+
+    #alison-inner-container > div > div:nth-child(2) 
+    {
+        grid-column: 2;
+        padding: 90px 40px;
+    }
+
+    #main-home > section:first-child
+    {
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    #main-home > #blog-container > div > div:first-child 
+    {
+        height: 100%;
+        width: 100%;
+    }
+
+    #main-home > #blog-container > div > div:nth-child(2) 
+    {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        width: 100%;
+    }
+
+    #blog-container > div, #alison-inner-container > div  
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #services-nutrition > div:nth-child(2) 
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:first-child 
+    {
+        width: 100%;
+        height: 150px;
+        padding-left: 45%;
+        padding-right: 55%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:nth-child(2)
+    {
+        padding: 70px 50px;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:nth-child(2)
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        width: 50%;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:last-child > img 
+    {
+        display: block;
+        width: 100%;
+    }
+
+
+    /* ABOUT */
+    #about-story-sect
+    {
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+        grid-row-end: 10;
+    }
+
+    #main-about img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #specialties-sect 
+    {
+        width: 100%;
+    }
+
+
+    /* PLANS */
+    #main-plans > section:last-child
+    {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0;
+        row-gap: 20px;
+        padding: 30px 50px;
+        width: 100%;
+    }
+
+    .plan-details-sect
+    {
+        grid-column-start: 1;
+    }
+
+    .plans-benefit-sect
+    {
+        grid-column-start: 2;
+    }
+
+    #plans-benefit-1
+    {
+        grid-row-start: 1;
+    }
+
+    #plans-benefit-2
+    {
+        grid-row-start: 2;
+    }
+
+    #plans-benefit-3
+    {
+        grid-row-start: 3;
+    }
+
+    #main-plans > section:last-child a:link
+    {
+        padding: 10px 40px;
+    }
+
+
+    /* UNDER CONSTRUCTION */
+    #main-about h1, #main-services h1, #main-plans h1, #main-blog h1, #main-contact h1
+    {
+        font-size: 3.1rem;
+    }
+
+    #main-about > section:first-child, #main-services > section:first-child, #main-plans > section:first-child, 
+    #main-blog > section:first-child, #main-contact > section:first-child
+    {
+        height: 140px;
+    }
+
+    #header-overlay
+    {
+        height: 140px;
+    }
+
+
+    /* FOOTER */
+    footer > section:first-child 
+    {
+        padding: 40px 60px 30px 60px;
+    }
+
+    .footer-logos
+    {
+        display: block;
+        justify-self: center;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px)         /* Small devices (landscape phones, 576px and up) */
+{
+    /* GENERAL */
+    #main-home h2, #main-about h2, #specialties-sect > h3
+    {
+        font-size: 2rem;
+    }
+
+    #alison-inner-container > div > div > p, #alison-inner-container > div > div > a, #blog-container > div > div > p, #services-nutrition > div > div > p,
+    #about-story-sect > p, #specialties-sect > div > p
+    {
+        font-size: 1.1rem;
+    }
+
+    
+    /* NAVIGATION */
+    nav 
+    {
+        grid-template-columns: 5fr 1fr;
+        background-color: #adc743;
+    }
+
+    nav > div > div:first-child
+    {
+        padding: 15px 12px 20px 12px;
+    }
+
+    nav > div:first-child > p:first-child
+    {
+        font-size: 2.3rem;
+    }
+
+    nav > div:first-child > p:last-child 
+    {
+        font-size: 1.3rem;
+        padding-top: 0;
+    }
+
+    #modal-content
+    {
+        display: none;
+    }
+
+
+    /* HAMBURGER MENU */
+    #hamburger-menu 
+    {
+        display: block;
+        height: 55%;
+        cursor: pointer;
+        align-self: start;
+        justify-self: start;
+        padding-top: 25px;
+    }
+
+    #close-menu-button
+    {
+        cursor: pointer;
+        justify-self: end;
+        padding: 40px 40px 0 0;
+        font-size: 2rem;
+        grid-row-start: 1;
+    }
+
+    #logInContainer
+    {
+        grid-row-start: 2;
+        align-self: end;
+    }
+
+    .nav-links
+    {
+        display: block;
+        text-align: right;
+        font-family: 'Ibarra Real Nova', serif;
+        grid-row-start: 3;
+    }
+
+    #socialMediaNav
+    {
+        grid-row-start: 4;
+        align-self: start;
+        padding-right: 70px;
+    }
+
+    #logInContainer > ul > li > a > i
+    {
+        font-size: 1.5rem;
+    }
+
+    #logInContainer > ul > li:last-child > a
+    {
+        font-size: 1.5rem;
+        padding-right: 70px;
+    }
+   
+    #menu-modal
+    {
+        display: none; 
+        position: fixed; 
+        z-index: 6; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4); 
+    }
+
+    #modal-content
+    {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 90vw;
+        height: 100vh;
+        z-index: 10;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 5fr 1fr;
+        justify-items: end;
+    }
+
+    .nav-links > li
+    {
+        display: block;
+        font-size: 1.7rem;
+        padding-right: 40px;
+    }
+
+    .nav-links > li:not(:last-child)
+    {
+        margin-bottom: 30px;
+    }
+
+    #socialMediaNav > ul > li > a > i
+    {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+
+    /* HOME */
+    #hero-overlay 
+    {
+        height: 100%;
+    }
+    
+    #main-home .container > #transparent-bar 
+    {
+        width: 80%;
+        height: 60vh;
+        padding: 50px 40px 40px 40px;
+        justify-self: center;
+        font-size: 1.6rem;
+        margin: 0 auto;
+    }
+
+    #main-home > section > div > div > h1
+    {
+        margin-bottom: 60px;
+        font-size: 2.5rem;
+    }
+
+    #transparent-bar > div > a:link
+    {
+        font-size: 1.4rem;
+        padding: 20px;
+    }
+
+    #transparent-bar > div
+    {
+        text-align: center;
+    }
+
+    #alison-inner-container > div > div > img 
+    {
+        object-fit: cover;
+        width: 100%;
+        height: 450px;
+    }
+
+    #alison-inner-container > div > div:nth-child(2) 
+    {
+        padding: 60px 80px;
+        grid-column: 1;
+    }
+
+    #main-home > section:first-child
+    {
+        height: 75vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    #main-home > #blog-container > div > div:first-child 
+    {
+        height: 100%;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #main-home > #blog-container > div > div:nth-child(2) 
+    {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        width: 100%;
+    }
+
+    #blog-container > div, #alison-inner-container > div  
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #single-div-salad > img 
+    {
+        height: 400px;
+    }
+
+    #services-nutrition > div:nth-child(2) 
+    {
+        display: block;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:first-child 
+    {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:first-child > a, #main-home > #blog-container > div > div:first-child > a
+    {
+        font-size: 2rem;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:nth-child(2)
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        width: 100%;
+        padding: 60px 80px;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:last-child > img 
+    {
+        display: block;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+
+    /* ABOUT */
+    #about-story-sect
+    {
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+        grid-row-end: 10;
+    }
+
+    #main-about > section:last-child
+    {
+        display: block;
+    }
+
+    #main-about h2
+    {
+        font-size: 2rem;
+    }
+
+    #main-about img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    #specialties-sect 
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* PLANS */
+    #main-plans > section:last-child
+    {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 30px 40px 0 40px;
+    }
+/*
+    #plans-benefit-1
+    {
+        grid-row-start: 2;
+    }
+
+    #plans-benefit-2
+    {
+        grid-row-start: 3;
+    }*/
+
+    .plans-benefit-sect
+    {
+        display: block;
+    }
+
+    #plans-benefit-1
+    {
+        grid-row-start: 2;
+    }
+
+    #plans-benefit-2
+    {
+        grid-row-start: 4;
+    }
+
+    .plans-benefit-sect
+    {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #main-plans > section:last-child > .plan-details-sect
+    {
+        margin-bottom: 0;
+    }
+
+/*
+    .plan-dropdown-arrow
+    {
+        display: block;
+        padding-top: 15px;
+        font-size: 1.3rem;
+        color: #acacac;
+    }
+
+    .plan-pushup-arrow
+    {
+        display: none;
+        justify-self: center;
+        font-size: 1.3rem;
+        color: #acacac;
+        position: relative;
+        bottom: 0;
+        padding: 20px 0 5px 0;
+    }
+*/
+
+    /* UNDER CONSTRUCTION */
+    #main-about h1, #main-services h1, #main-blog h1, #main-contact h1
+    {
+        font-size: 3.2rem;
+        padding: 20px 50px;
+        height: 120px;
+    }
+
+    #header-overlay
+    {
+        height: 160px;
+    }
+
+    #main-plans h1
+    {
+        font-size: 3rem;
+        padding: 20px 50px;
+        height: 160px;
+    }
+    
+
+    /* FOOTER */
+    footer h3
+    {
+        font-size: 1.8rem;
+    }
+
+    footer p
+    {
+        font-size: 1.1rem;
+    }
+
+    footer > section:first-child 
+    {
+        padding: 40px 60px 10px 60px;
+        grid-template-columns: 1fr;
+    }
+
+    #alison-name-info   /* Alison Knight - footer */
+    {
+        border-left: 0px;
+        border-right: 0px;
+        grid-row-start: 1;
+        padding: 0;
+    }
+
+    #alison-title-info    /* Nutritionist - footer */
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        padding: 0;
+        font-size: 1.1rem;
+    }
+
+    footer > section:first-child > div:first-child  /* Address info - footer */
+    {
+        grid-row-start: 3;
+        padding-bottom: 0;
+    }
+
+    footer > section:first-child > p:nth-child(3)    /* Telephone info - footer */
+    {
+        grid-row-start: 4;
+        padding-top: 0;
+        padding-bottom: 25px;
+    }
+
+    .footer-logos
+    {
+        display: block;
+        justify-self: center;
+        grid-row-start: 5;
+    }
+}
+
+
+@media (max-width: 575.98px)                                /* Extra small devices (portrait phones, less than 576px) */
+{
+    /* GENERAL */
+    #main-home h2, #main-about h2, #specialties-sect > h3
+    {
+        font-size: 2rem;
+    }
+
+    #alison-inner-container > div > div > p, #alison-inner-container > div > div > a, #blog-container > div > div > p, #services-nutrition > div > div > p,
+    #about-story-sect > p, #specialties-sect > div > p
+    {
+        font-size: 1.1rem;
+    }
+    
+    
+    /* NAVIGATION */
+    nav 
+    {
+        grid-template-columns: 4fr 1fr;
+        background-color: #adc743;
+    }
+
+    nav > div:first-child
+    {
+        padding: 15px 12px 20px 12px;
+    }
+
+    nav > div:first-child > p:first-child
+    {
+        font-size: 1.6rem;
+    }
+
+    nav > div:first-child > p:last-child 
+    {
+        font-size: 1.1rem;
+        padding-top: 0;
+    }
+
+    #modal-content
+    {
+        display: none;
+    }
+
+
+    /* HAMBURGER MENU */
+    #hamburger-menu 
+    {
+        display: block;
+        height: 55%;
+        cursor: pointer;
+        align-self: start;
+        justify-self: start;
+        padding-top: 15px;
+    }
+
+    #close-menu-button
+    {
+        cursor: pointer;
+        justify-self: end;
+        padding: 20px 40px 0 0;
+        font-size: 2rem;
+        grid-row-start: 1;
+    }
+
+    #logInContainer
+    {
+        grid-row-start: 2;
+        align-self: end;
+    }
+
+    .nav-links
+    {
+        display: block;
+        text-align: right;
+        font-family: 'Ibarra Real Nova', serif;
+        grid-row-start: 3;
+    }
+
+    #socialMediaNav
+    {
+        grid-row-start: 4;
+        align-self: start;
+        padding-right: 60px;
+    }
+
+    #logInContainer > ul > li > a > i
+    {
+        font-size: 1.5rem;
+    }
+
+    #logInContainer > ul > li:last-child > a
+    {
+        font-size: 1.5rem;
+        padding-right: 70px;
+    }
+   
+    #menu-modal
+    {
+        display: none; 
+        position: fixed; 
+        z-index: 6; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4); 
+    }
+
+    #modal-content
+    {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 90vw;
+        height: 100vh;
+        z-index: 10;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 5fr 1fr;
+        justify-items: end;
+    }
+
+    .nav-links > li
+    {
+        display: block;
+        font-size: 1.7rem;
+        padding-right: 40px;
+    }
+
+    .nav-links > li:not(:last-child)
+    {
+        margin-bottom: 30px;
+    }
+
+    #socialMediaNav > ul > li > a > i
+    {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+
+
+    /* HOME */
+    #hero-overlay 
+    {
+        height: 100%;
+    }
+    
+    #main-home .container > #transparent-bar 
+    {
+        width: 80%;
+        height: 60vh;
+        padding: 50px 30px 40px 30px;
+        justify-self: center;
+        font-size: 1.6rem;
+        margin: 0 auto;
+    }
+
+    #main-home > section > div > div > h1
+    {
+        margin-bottom: 40px;
+        font-size: 2.4rem;
+    }
+
+    #transparent-bar > div > a:link
+    {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    #transparent-bar > div
+    {
+        text-align: center;
+    }
+
+    #alison-inner-container > div > div > img 
+    {
+        object-fit: cover;
+        width: 100%;
+        height: 450px;
+    }
+
+    #alison-inner-container > div > div:nth-child(2) 
+    {
+        padding: 50px 40px;
+        grid-column: 1;
+    }
+
+    #main-home > section:first-child
+    {
+        height: 75vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    #main-home > #blog-container > div > div:first-child 
+    {
+        height: 100%;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #main-home > #blog-container > div > div:nth-child(2) 
+    {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        width: 100%;
+        padding: 50px 40px;
+    }
+
+    #blog-container > div, #alison-inner-container > div  
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #single-div-salad > img 
+    {
+        height: 400px;
+    }
+
+    #services-nutrition > div:nth-child(2) 
+    {
+        display: block;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:first-child 
+    {
+        width: 100%;
+        height: 100%;
+        padding-left: 40%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:first-child > a, #main-home > #blog-container > div > div:first-child > a
+    {
+        font-size: 2rem;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:nth-child(2)
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        width: 100%;
+        padding: 50px 40px;
+    }
+
+    #services-nutrition > div:nth-child(2) > div:last-child > img 
+    {
+        display: block;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+
+    /* ABOUT */
+    #about-story-sect
+    {
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+        grid-row-end: 10;
+    }
+
+    #main-about > section:last-child
+    {
+        display: block;
+    }
+
+    #main-about h2
+    {
+        font-size: 2rem;
+    }
+
+    #main-about img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    #specialties-sect 
+    {
+        width: 100%;
+    }
+
+
+    /* PLANS */
+    #main-plans > section:first-child
+    {
+        height: 140px;
+    }
+
+    #main-plans > section:last-child
+    {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 30px 40px 0 40px;
+    }
+
+    #plans-benefit-1
+    {
+        grid-row-start: 2;
+    }
+
+    #plans-benefit-2
+    {
+        grid-row-start: 4;
+    }
+
+    .plans-benefit-sect
+    {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #main-plans > section:last-child > .plan-details-sect
+    {
+        margin-bottom: 0;
+    }
+
+
+/*
+    .plan-dropdown-arrow
+    {
+        display: block;
+        padding-top: 15px;
+        font-size: 1.3rem;
+        color: #acacac;
+    }
+
+    .plan-pushup-arrow
+    {
+        display: none;
+        justify-self: center;
+        font-size: 1.3rem;
+        color: #acacac;
+        position: relative;
+        bottom: 0;
+        padding: 20px 0 5px 0;
+    }
+*/
+
+    /* UNDER CONSTRUCTION */
+    #main-about h1, #main-services h1, #main-blog h1, #main-contact h1
+    {
+        font-size: 2.3rem;
+        padding: 20px 50px;
+        height: 120px;
+    }
+
+    #main-about > section:first-child, #main-services > section:first-child, #main-blog > section:first-child, #main-contact > section:first-child
+    {
+        height: 100px;
+    }
+
+    #header-overlay
+    {
+        height: 140px;
+    }
+
+    #main-plans h1
+    {
+        font-size: 2.7rem;
+        padding: 20px 60px;
+        height: 100%;
+    }
+
+
+    /* FOOTER */
+    footer > section:first-child 
+    {
+        padding: 40px 30px 10px 30px;
+        grid-template-columns: 1fr;
+    }
+
+    footer > section:last-child 
+    {
+        padding: 0 30px;
+    }
+
+    footer h3
+    {
+        font-size: 1.7rem;
+    }
+
+    footer p, #alison-title-info
+    {
+        font-size: 1.1rem;
+    }
+
+    #alison-name-info   /* Alison Knight - footer */
+    {
+        border-left: 0px;
+        border-right: 0px;
+        grid-row-start: 1;
+        padding: 0;
+    }
+
+    #alison-title-info    /* Nutritionist - footer */
+    {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        padding: 0;
+    }
+
+    footer > section:first-child > div:first-child  /* Address info - footer */
+    {
+        grid-row-start: 3;
+        padding-bottom: 0;
+    }
+
+    footer > section:first-child > p:nth-child(3)    /* Telephone info - footer */
+    {
+        grid-row-start: 4;
+        padding-top: 0;
+        padding-bottom: 25px;
+    }
+
+    .footer-logos
+    {
+        display: block;
+        justify-self: center;
+        grid-row-start: 5;
+    }
+}
