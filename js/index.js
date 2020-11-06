@@ -22,6 +22,24 @@ function main()
         //Animation
         menuModal.classList.remove("animate__animated", "animate__slideOutRight");
         menuModal.classList.add("animate__animated", "animate__slideInRight");
+
+        //Allows for resizing without compromising event listener rules
+        window.addEventListener("resize", function() {
+            if (window.matchMedia("(min-width: 992px)").matches) 
+            {
+                modalTransparentLayer.style.display="none";  
+                closeMenuButton.style.display="none";
+                bodyOpenModal.style.overflow="auto";
+                menuModal.style.display="grid";
+            }
+
+            else
+            {
+                modalTransparentLayer.style.display="block";  
+                closeMenuButton.style.display="block";
+                bodyOpenModal.style.overflow="hidden";
+            }
+        })
     })
 
 
